@@ -6,9 +6,8 @@ kind("ConsoleApp")
 language("C")
 targetdir("bin/")
 buildoptions({ "-std=c11", "-D_GNU_SOURCE" })
-
-links({ "xcb", "xcb-xinerama", "xcb-randr" })
-
+links({ "xcb", "xcb-xinerama", "xcb-randr", "X11", "X11-xcb", "Xft", "z", "fontconfig", "freetype" })
+includedirs({ "/usr/include/freetype2" })
 files({
 	"src/**.h",
 	"src/**.c",
